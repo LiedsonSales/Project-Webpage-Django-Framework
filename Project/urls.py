@@ -16,7 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+
+
+# HTTP REQUEST
+def my_view(request):
+    return HttpResponse('clean page not found message')
+    # Return HTTP Response
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('about/', my_view)
 ]
