@@ -14,27 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
-from django.http import HttpResponse
-
-
-# HTTP REQUEST
-def home(request):
-    return HttpResponse('clean page not found message')
-    # Return HTTP Response
-
-def second(request):
-    return HttpResponse('Second page for demo a url destiny')
-
-def third(request):
-    return HttpResponse('A third page')
+from django.urls import path, include
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('second/', second),
-    path('third/', third),
+    path('', include('recipes.urls')),
 ]
