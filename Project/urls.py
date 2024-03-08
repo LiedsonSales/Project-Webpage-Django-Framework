@@ -20,13 +20,21 @@ from django.http import HttpResponse
 
 
 # HTTP REQUEST
-def my_view(request):
+def home(request):
     return HttpResponse('clean page not found message')
     # Return HTTP Response
+
+def second(request):
+    return HttpResponse('Second page for demo a url destiny')
+
+def third(request):
+    return HttpResponse('A third page')
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about/', my_view)
+    path('', home),
+    path('second/', second),
+    path('third/', third),
 ]
