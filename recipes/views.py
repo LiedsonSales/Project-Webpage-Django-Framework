@@ -5,10 +5,12 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'recipes/home.html')
+    return render(request, 'recipes/home.html', context={
+        'name':'Liedson'
+    })
 
 def sobre(request):
-    return HttpResponse('this is the second page')
+    return render(request, 'del-me/temp.html')
 
 def contato(request):
     return HttpResponse('this is the third page')
