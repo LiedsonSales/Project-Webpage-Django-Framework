@@ -10,7 +10,7 @@ def home(request):
     })
 
 def sobre(request):
-    return render(request, 'del-me/temp.html')
+    return render(request, 'recipes/sobre.html')
 
 def contato(request):
     return HttpResponse('this is the third page')
