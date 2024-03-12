@@ -5,10 +5,10 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('clean page not found message 111')
+    return render(request, 'recipes/home.html')
 
-def second(request):
+def sobre(request):
     return HttpResponse('this is the second page')
 
-def third(request):
+def contato(request):
     return HttpResponse('this is the third page')
